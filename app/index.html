@@ -19,6 +19,16 @@
 
     <script src="assets/vendor.js"></script>
     <script src="assets/meteoub-notifier.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js', {scope: './'})
+            .catch(function(error) {
+                alert('Error registering service worker:'+error);
+            });
+      } else {
+          alert('service worker not supported');
+      }
+    </script>
 
     {{content-for 'body-footer'}}
   </body>

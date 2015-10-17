@@ -43,5 +43,18 @@ module.exports = function(environment) {
 
   }
 
+  ENV.serviceWorker = {
+    enabled: true,
+    serviceWorkerFile: "service-worker.js",
+    excludePaths: ['tests/', 'online.html',],
+    includePaths: ['/'],
+    fallback: [
+      '/online.html offline.html'
+    ],
+    dynamicCache: [
+      '/api/todos'
+    ]
+  };
+
   return ENV;
 };
