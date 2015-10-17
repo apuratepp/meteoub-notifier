@@ -1,0 +1,9 @@
+{
+  "firebase": "meteoub-notifier",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
